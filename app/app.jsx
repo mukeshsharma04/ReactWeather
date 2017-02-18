@@ -1,10 +1,14 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var {Route, Router, IndexRoute, hashHistory} = require('react-router');
-var Main = require('./components/Main');
-var Weather = require('./components/Weather');
-var About = require('./components/About');
-var Examples = require('./components/Examples');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import injectTapEventPlugin from "react-tap-event-plugin";
+import {Route, Router, IndexRoute, hashHistory} from 'react-router';
+import Main from './components/Main';
+import Weather from './components/Weather';
+import About from './components/About';
+import Examples from './components/Examples';
+
+
+injectTapEventPlugin();
 
 ReactDOM.render(
  <Router history={hashHistory}>

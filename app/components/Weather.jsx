@@ -1,7 +1,11 @@
-var React = require('react');
-var WeatherForm = require('./WeatherForm');
-var WeatherMsg = require('./WeatherMsg');
-var OpenWeatherMap = require('./../api/OpenWeatherMap')
+import React from 'react';
+import WeatherForm from './WeatherForm';
+import WeatherMsg from './WeatherMsg';
+import OpenWeatherMap from './../api/OpenWeatherMap';
+import {Card, CardActions, CardHeader, CardTitle, CardText} from 'material-ui/Card';
+import Divider from 'material-ui/Divider';
+import LinearProgress from 'material-ui/LinearProgress';
+
 var Weather = React.createClass({
  getInitialState : function() {
   return {
@@ -30,17 +34,22 @@ var Weather = React.createClass({
 
   function renderMessage () {
     if(isLoading) {
-     return <h3>Fetching Weather.....</h3>;
+     return <LinearProgress />;
     }else if(temp && location) {
      return <WeatherMsg location={location} temp={temp}/>;
     }
   }
 
   return (
-   <div style={{border : '1px solid blue',padding : '5px'}}>
-    <h2>Get Wheather</h2>
-    <WeatherForm onSearch={this.handleSearch}/>
-    {renderMessage()}
+   <div>
+    <Card >
+      <CardTitle title="Get Weather" style={{textAlign : "center"}}/>
+      <Divider/>
+      <CardActions>
+       <WeatherForm onSearch={this.handleSearch}/>
+       {renderMessage()}
+      </CardActions>
+    </Card>
    </div>
   );
  }

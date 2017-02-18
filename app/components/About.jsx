@@ -1,5 +1,6 @@
-var React = require('react');
-
+import React from 'react';
+import {Card, CardActions, CardHeader, CardTitle, CardText} from 'material-ui/Card';
+import Divider from 'material-ui/Divider';
 //Old Way we have only render function here we can make it stateless
 // var About = React.createClass({
 //  render : function() {
@@ -18,8 +19,13 @@ var React = require('react');
 var About = (props) => {
  return (
   <div>
-   <h3>About</h3>
-   <p>Welcome to About Page !</p>
+   <Card >
+     <CardTitle title="About" style={{textAlign : "center"}}/>
+     <Divider/>
+     <CardActions>
+      <p>Welcome to About Page !</p>
+     </CardActions>
+   </Card>
   </div>
  );
 }

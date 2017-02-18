@@ -1,5 +1,4 @@
-var React = require('react');
-
+import React from 'react';
 // var WeatherMsg = (props) => {
 //  var {temp,location} = props;
 //  return (
@@ -9,11 +8,11 @@ var React = require('react');
 //  );
 // }
 
-//we can destruct props as aparam to directly in values like here
+//we can destruct props as a param to directly in values like here
 var WeatherMsg = ({temp,location}) => {
  return (
   <div>
-   <h2>It is {temp} in {location}.</h2>
+   <h3>IT is {temp} in {location}.</h3>
   </div>
  );
 }
