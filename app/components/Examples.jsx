@@ -2,7 +2,10 @@ var React = require('react');
 
 var Examples = (props) => {
  return (
-   <h2>Example component</h2>
+  <div>
+   <h2>Example</h2>
+   <p>You are at examples page!</p>
+  </div> 
  );
 }
 
