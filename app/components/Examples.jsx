@@ -4,8 +4,8 @@ var Examples = (props) => {
  return (
   <div>
    <h2>Example</h2>
-   <p>You are at examples page!</p>
-  </div> 
+   <p>Welcome to example page!</p>
+  </div>
  );
 }
 
